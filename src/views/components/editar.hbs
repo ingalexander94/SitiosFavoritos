@@ -1,0 +1,33 @@
+<section class="container">
+    <div class="row">
+        <h3 class="center-align">Actualizar Marcador</h3>
+        <article class="col s6 offset-s3">
+            <form method="POST" action="/links/editar/{{datosActuales.id}}">
+                <div class="input-field">
+                    <i class="material-icons prefix">personal_video</i>
+                    <label for="titulo">Titulo</label>
+                    <input type="text" value="{{datosActuales.titulo}}" name="titulo" id="titulo" required>
+                </div>
+
+                <div class="input-field">
+                    <i class="material-icons prefix">link</i>
+                    <label for="url">URL</label>
+                    <input type="url" value="{{datosActuales.url}}" name="url" id="url" required>
+                </div>
+
+                <div class="input-field">
+                    <i class="material-icons prefix">mode_edit</i>
+                    <label for="descripcion">Descripción</label>
+                    <textarea name="descripcion" id="descripcion" rows="2" class="materialize-textarea" required> {{datosActuales.descripcion}} </textarea>
+                </div>
+
+                <p class="center-align">
+                    <button class="waves-effect waves-light btn btn-large" type="submit">
+                    <i class="material-icons right">send</i>Actualizar</button>
+                </p>
+
+            </form>
+
+        </article>
+    </div>
+</section>

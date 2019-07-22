@@ -1,0 +1,38 @@
+<nav class="light-blue darken-4">
+  <div class="container">
+    <div class="nav-wrapper">
+    <a href="/" class="brand-logo">Mis Sitios favoritos</a>
+    <a href="/" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      {{#if usuario}}
+      <li><a class='dropdown-trigger' href='' data-target='Menu'>Opciones</a></li>
+      {{else}}
+      <li><a href="/registrarse">Registrarse</a></li>
+      <li><a href="/entrar">Iniciar Sesión</a></li>
+      {{/if}}
+    </ul>
+  </div>
+  </div>
+</nav>
+
+<ul id='Menu' class='dropdown-content'>
+  <li><a href="/links">Ver marcador</a></li>
+  <li><a href="/links/crear">Crear marcador</a></li>
+  <li><a href="/perfil">Ver Perfil</a></li>
+  <li><a href="/salir">Salir</a></li>
+</ul>
+<ul id='Menu2' class='dropdown-content'>
+  <li><a href="/links">Ver marcador</a></li>
+  <li><a href="/links/crear">Crear marcador</a></li>
+  <li><a href="/perfil">Ver Perfil</a></li>
+  <li><a href="/salir">Salir</a></li>
+</ul>
+
+<ul class="sidenav" id="mobile-demo">
+  {{#if usuario}}
+      <li><a class='dropdown-trigger' href='' data-target='Menu2'>Opciones</a></li>
+      {{else}}
+      <li><a href="/registrarse">Registrarse</a></li>
+      <li><a href="/entrar">Iniciar Sesión</a></li>
+      {{/if}}
+</ul>

@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        {{#each listado}}
+        <div class="col s12 m6 center-align">
+            <div class="card indigo lighten-5">
+                <div class="card-content">
+                    <span class="card-title">{{titulo}}</span>
+                    <p>{{descripcion}}</p>
+                    <p>{{timeago fechacreacion}}</p>
+                    <br>
+                    <a href="{{url}}" target="_blank" class="waves-effect waves-light btn  purple darken-4"><i class="material-icons right">cloud</i>Ir al Sitio</a>
+                </div>
+                <div class="card-action ">
+                    <a href="links/eliminar/{{id}}" class="btn-floating btn-large waves-effect waves-light red darken-4"><i class="material-icons">delete</i></a>
+                    <a href="links/editar/{{id}}" class="btn-floating btn-large waves-effect waves-light blue darken-4"><i class="material-icons">edit</i></a>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <h1>La lista de marcadores esta vacia</h1>
+        <a href="/links/crear" class="btn btn-large">
+            Añadir nuevo marcador
+        </a>
+        {{/each}}
+    </div>
+
+</div>
